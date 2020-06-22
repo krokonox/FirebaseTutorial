@@ -14,6 +14,7 @@ class FTTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.setup()
     }
     
     required init?(coder: NSCoder) {
@@ -22,11 +23,13 @@ class FTTextField: UITextField {
     
     private func setup() {
         self.clipsToBounds = true
+        self.isSecureTextEntry = true
         self.font = UIFont.systemFont(ofSize: 16)
         self.layer.cornerRadius = 20
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = (UIColor(named: "GreyColor") as! CGColor)
+        self.layer.borderColor = UIColor(named: "GreyColor")?.cgColor
     }
+    
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }

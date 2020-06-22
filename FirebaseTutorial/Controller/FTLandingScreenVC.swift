@@ -20,11 +20,9 @@ class FTLandingScreenVC: UIViewController {
         return image
     }()
     
-    private lazy var titleLabel: UILabel = {
-        let title = UILabel()
+    private lazy var titleLabel: FTTitleLabel = {
+        let title = FTTitleLabel()
         title.text = "Welcome to your app"
-        title.font = UIFont.boldSystemFont(ofSize: 30)
-        title.textColor = UIColor(named: "RedColor")
         return title
     }()
     

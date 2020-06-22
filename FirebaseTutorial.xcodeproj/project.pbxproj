@@ -22,6 +22,7 @@
 		846EC6D224A0B6AB00FCC771 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6D124A0B6AB00FCC771 /* UIColor+Ex.swift */; };
 		846EC6D424A0BBBE00FCC771 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6D324A0BBBE00FCC771 /* UIViewController+Ex.swift */; };
 		846EC6D624A1037700FCC771 /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6D524A1037700FCC771 /* UIImage+Ex.swift */; };
+		846EC6D824A1072200FCC771 /* FTTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6D724A1072200FCC771 /* FTTitleLabel.swift */; };
 		9A0937D59318548DEEFE5800 /* Pods_FirebaseTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090BE69D1B70D8D76189EB2A /* Pods_FirebaseTutorial.framework */; };
 		9EAD4E9EB865A71A7F1F34AC /* Pods_FirebaseTutorial_FirebaseTutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCBC07EA580839797C2F24C /* Pods_FirebaseTutorial_FirebaseTutorialUITests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		846EC6D124A0B6AB00FCC771 /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
 		846EC6D324A0BBBE00FCC771 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
 		846EC6D524A1037700FCC771 /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
+		846EC6D724A1072200FCC771 /* FTTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTitleLabel.swift; sourceTree = "<group>"; };
 		964E9472F35A2D992925E4A6 /* Pods-FirebaseTutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTutorialTests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseTutorialTests/Pods-FirebaseTutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F9CC90673960C1D4C59B2A /* Pods-FirebaseTutorial-FirebaseTutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTutorial-FirebaseTutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseTutorial-FirebaseTutorialUITests/Pods-FirebaseTutorial-FirebaseTutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAB52B6B9AD3A3471416285E /* Pods-FirebaseTutorial-FirebaseTutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTutorial-FirebaseTutorialUITests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseTutorial-FirebaseTutorialUITests/Pods-FirebaseTutorial-FirebaseTutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,9 +172,9 @@
 		846EC6C8249FBEC100FCC771 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				846EC6C6249FBEBE00FCC771 /* FTLandingScreenVC.swift */,
 				846EC6C2249FBE9900FCC771 /* FTLoginScreenVC.swift */,
 				846EC6C4249FBEAD00FCC771 /* FTSignUpScreenVC.swift */,
-				846EC6C6249FBEBE00FCC771 /* FTLandingScreenVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +184,7 @@
 			children = (
 				846EC6CC249FBF8500FCC771 /* FTButton.swift */,
 				846EC6CE249FBF9E00FCC771 /* FTTextField.swift */,
+				846EC6D724A1072200FCC771 /* FTTitleLabel.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				846EC6C7249FBEBE00FCC771 /* FTLandingScreenVC.swift in Sources */,
 				846EC6C5249FBEAD00FCC771 /* FTSignUpScreenVC.swift in Sources */,
 				840DC02F249E66C20077585A /* AppDelegate.swift in Sources */,
+				846EC6D824A1072200FCC771 /* FTTitleLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
