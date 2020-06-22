@@ -3,18 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		47E351DB44AA18F5FF2013AD /* Pods_FirebaseTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ECD317D66FD4C7F1256601 /* Pods_FirebaseTutorialTests.framework */; };
 		840DC02F249E66C20077585A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DC02E249E66C20077585A /* AppDelegate.swift */; };
-		840DC033249E66C20077585A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DC032249E66C20077585A /* ViewController.swift */; };
 		840DC038249E66CA0077585A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840DC037249E66CA0077585A /* Assets.xcassets */; };
 		840DC03B249E66CA0077585A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840DC039249E66CA0077585A /* LaunchScreen.storyboard */; };
 		840DC046249E66CA0077585A /* FirebaseTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DC045249E66CA0077585A /* FirebaseTutorialTests.swift */; };
 		840DC051249E66CA0077585A /* FirebaseTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DC050249E66CA0077585A /* FirebaseTutorialUITests.swift */; };
 		840DC05F249E77100077585A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840DC05E249E77100077585A /* GoogleService-Info.plist */; };
+		846EC6C3249FBE9900FCC771 /* FTLoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6C2249FBE9900FCC771 /* FTLoginScreenVC.swift */; };
+		846EC6C5249FBEAD00FCC771 /* FTSignUpScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6C4249FBEAD00FCC771 /* FTSignUpScreenVC.swift */; };
+		846EC6C7249FBEBE00FCC771 /* FTLandingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6C6249FBEBE00FCC771 /* FTLandingScreenVC.swift */; };
+		846EC6CD249FBF8500FCC771 /* FTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6CC249FBF8500FCC771 /* FTButton.swift */; };
+		846EC6CF249FBF9E00FCC771 /* FTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6CE249FBF9E00FCC771 /* FTTextField.swift */; };
+		846EC6D224A0B6AB00FCC771 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6D124A0B6AB00FCC771 /* UIColor+Ex.swift */; };
+		846EC6D424A0BBBE00FCC771 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6D324A0BBBE00FCC771 /* UIViewController+Ex.swift */; };
+		846EC6D624A1037700FCC771 /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC6D524A1037700FCC771 /* UIImage+Ex.swift */; };
 		9A0937D59318548DEEFE5800 /* Pods_FirebaseTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090BE69D1B70D8D76189EB2A /* Pods_FirebaseTutorial.framework */; };
 		9EAD4E9EB865A71A7F1F34AC /* Pods_FirebaseTutorial_FirebaseTutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCBC07EA580839797C2F24C /* Pods_FirebaseTutorial_FirebaseTutorialUITests.framework */; };
 /* End PBXBuildFile section */
@@ -41,7 +48,6 @@
 		5B32A61BEBFC05C16315CD2F /* Pods-FirebaseTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTutorial.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseTutorial/Pods-FirebaseTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		840DC02B249E66C20077585A /* FirebaseTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840DC02E249E66C20077585A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		840DC032249E66C20077585A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		840DC037249E66CA0077585A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840DC03A249E66CA0077585A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840DC03C249E66CA0077585A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +58,15 @@
 		840DC050249E66CA0077585A /* FirebaseTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTutorialUITests.swift; sourceTree = "<group>"; };
 		840DC052249E66CA0077585A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840DC05E249E77100077585A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/D6A671EF-996C-4146-BB4D-32BBAC892DDC/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		846EC6C2249FBE9900FCC771 /* FTLoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTLoginScreenVC.swift; sourceTree = "<group>"; };
+		846EC6C4249FBEAD00FCC771 /* FTSignUpScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTSignUpScreenVC.swift; sourceTree = "<group>"; };
+		846EC6C6249FBEBE00FCC771 /* FTLandingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTLandingScreenVC.swift; sourceTree = "<group>"; };
+		846EC6CB249FBF5F00FCC771 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		846EC6CC249FBF8500FCC771 /* FTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTButton.swift; sourceTree = "<group>"; };
+		846EC6CE249FBF9E00FCC771 /* FTTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTextField.swift; sourceTree = "<group>"; };
+		846EC6D124A0B6AB00FCC771 /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
+		846EC6D324A0BBBE00FCC771 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
+		846EC6D524A1037700FCC771 /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
 		964E9472F35A2D992925E4A6 /* Pods-FirebaseTutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTutorialTests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseTutorialTests/Pods-FirebaseTutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F9CC90673960C1D4C59B2A /* Pods-FirebaseTutorial-FirebaseTutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTutorial-FirebaseTutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseTutorial-FirebaseTutorialUITests/Pods-FirebaseTutorial-FirebaseTutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAB52B6B9AD3A3471416285E /* Pods-FirebaseTutorial-FirebaseTutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTutorial-FirebaseTutorialUITests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseTutorial-FirebaseTutorialUITests/Pods-FirebaseTutorial-FirebaseTutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,11 +139,11 @@
 		840DC02D249E66C20077585A /* FirebaseTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				840DC02E249E66C20077585A /* AppDelegate.swift */,
-				840DC032249E66C20077585A /* ViewController.swift */,
-				840DC037249E66CA0077585A /* Assets.xcassets */,
-				840DC039249E66CA0077585A /* LaunchScreen.storyboard */,
 				840DC03C249E66CA0077585A /* Info.plist */,
+				846EC6C8249FBEC100FCC771 /* Controller */,
+				846EC6C9249FBF4300FCC771 /* Controls */,
+				846EC6D024A0B35500FCC771 /* Extensions */,
+				846EC6CA249FBF4C00FCC771 /* Other */,
 				840DC05E249E77100077585A /* GoogleService-Info.plist */,
 			);
 			path = FirebaseTutorial;
@@ -152,6 +167,46 @@
 			path = FirebaseTutorialUITests;
 			sourceTree = "<group>";
 		};
+		846EC6C8249FBEC100FCC771 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846EC6C2249FBE9900FCC771 /* FTLoginScreenVC.swift */,
+				846EC6C4249FBEAD00FCC771 /* FTSignUpScreenVC.swift */,
+				846EC6C6249FBEBE00FCC771 /* FTLandingScreenVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		846EC6C9249FBF4300FCC771 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				846EC6CC249FBF8500FCC771 /* FTButton.swift */,
+				846EC6CE249FBF9E00FCC771 /* FTTextField.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		846EC6CA249FBF4C00FCC771 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				846EC6CB249FBF5F00FCC771 /* GoogleService-Info.plist */,
+				840DC039249E66CA0077585A /* LaunchScreen.storyboard */,
+				840DC02E249E66C20077585A /* AppDelegate.swift */,
+				840DC037249E66CA0077585A /* Assets.xcassets */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		846EC6D024A0B35500FCC771 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				846EC6D124A0B6AB00FCC771 /* UIColor+Ex.swift */,
+				846EC6D324A0BBBE00FCC771 /* UIViewController+Ex.swift */,
+				846EC6D524A1037700FCC771 /* UIImage+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DF230E0EE79DDA279516BDE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +217,6 @@
 				964E9472F35A2D992925E4A6 /* Pods-FirebaseTutorialTests.debug.xcconfig */,
 				EB3346394ABF08E22389E30D /* Pods-FirebaseTutorialTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -405,7 +459,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840DC033249E66C20077585A /* ViewController.swift in Sources */,
+				846EC6CD249FBF8500FCC771 /* FTButton.swift in Sources */,
+				846EC6CF249FBF9E00FCC771 /* FTTextField.swift in Sources */,
+				846EC6D424A0BBBE00FCC771 /* UIViewController+Ex.swift in Sources */,
+				846EC6D224A0B6AB00FCC771 /* UIColor+Ex.swift in Sources */,
+				846EC6D624A1037700FCC771 /* UIImage+Ex.swift in Sources */,
+				846EC6C3249FBE9900FCC771 /* FTLoginScreenVC.swift in Sources */,
+				846EC6C7249FBEBE00FCC771 /* FTLandingScreenVC.swift in Sources */,
+				846EC6C5249FBEAD00FCC771 /* FTSignUpScreenVC.swift in Sources */,
 				840DC02F249E66C20077585A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
