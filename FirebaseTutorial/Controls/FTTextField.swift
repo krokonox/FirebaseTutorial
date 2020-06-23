@@ -23,7 +23,6 @@ class FTTextField: UITextField {
     
     private func setup() {
         self.clipsToBounds = true
-        self.isSecureTextEntry = true
         self.font = UIFont.systemFont(ofSize: 16)
         self.layer.cornerRadius = 20
         self.layer.borderWidth = 1.0

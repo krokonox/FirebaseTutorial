@@ -27,6 +27,7 @@ class FTLoginScreenVC: UIViewController {
     
     private lazy var passwordTextField: FTTextField = {
            let textField = FTTextField()
+           textField.isSecureTextEntry = true
            textField.placeholder = "Password"
            return textField
        }()
@@ -63,6 +64,8 @@ class FTLoginScreenVC: UIViewController {
         self.view.addSubview(facebookButton)
         
         self.setupConstraints()
+        self.setupNavBackBarItem()
+        self.hideKeyboardWhenTappedAround()
     }
     
     private func setupConstraints() {
@@ -105,6 +108,13 @@ class FTLoginScreenVC: UIViewController {
         }
     }
     
+    private func setupNavBackBarItem() {
+        var backButtonImage = UIImage(named: "Arrow")
+        backButtonImage = backButtonImage?.stretchableImage(withLeftCapWidth: 15, topCapHeight: 30)
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backButtonImage, for: .normal, barMetrics: .default)
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "Arrow")
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -112,6 +122,12 @@ class FTLoginScreenVC: UIViewController {
         
         self.view.backgroundColor = .white
         self.setupViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.passwordTextField.becomeFirstResponder()
+        self.emailTextField.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {

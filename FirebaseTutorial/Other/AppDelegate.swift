@@ -18,8 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: FTLandingScreenVC())
         window?.makeKeyAndVisible()
+        self.setupNavBackBarItem()
         FirebaseApp.configure()
         return true
+    }
+    
+    private func setupNavBackBarItem() {
+        var backButtonImage = UIImage(named: "Arrow")
+        backButtonImage = backButtonImage?.stretchableImage(withLeftCapWidth: 15, topCapHeight: 30)
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backButtonImage, for: .normal, barMetrics: .default)
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "Arrow")
     }
 }
 

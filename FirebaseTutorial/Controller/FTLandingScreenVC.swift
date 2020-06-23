@@ -104,6 +104,7 @@ class FTLandingScreenVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+       // self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "Arrow")
         super.viewWillAppear(true)
     }
     
