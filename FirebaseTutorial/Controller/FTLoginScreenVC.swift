@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 
-class FTLoginScreenVC: UIViewController {
+class FTLoginScreenVC: UIViewController, GIDSignInDelegate {
     
     // MARK: - Gui Variables
     
@@ -120,6 +122,9 @@ class FTLoginScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
+        
         self.view.backgroundColor = .white
         self.setupViews()
     }
@@ -138,15 +143,43 @@ class FTLoginScreenVC: UIViewController {
         super.viewWillDisappear(true)
     }
     
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        guard let auth = user.authentication else { return }
+        let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
+        Auth.auth().signIn(with: credentials) { (authResult, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("Login Successful.")
+            }
+    }
+}
     // MARK: - Objc Functions
     
     @objc private func didTapLoginButton() {
-        let loginVC = FTLoginScreenVC()
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            AuthManager.sh.signIn(email: email, password: password) { [weak self] (success) in
+                guard let self = self else { return }
+                var message: String = ""
+                if (success) {
+                    message = "User was successfully logged in!"
+                } else {
+                    message = "There was an error"
+                }
+                
+                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+        
     }
     
     @objc private func didTapFacebookButton() {
-        let signUpVC = FTSignUpScreenVC()
-        self.navigationController?.pushViewController(signUpVC, animated: true)
+         GIDSignIn.sharedInstance().signIn()
     }
 }

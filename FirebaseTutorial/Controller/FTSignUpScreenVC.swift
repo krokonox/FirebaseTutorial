@@ -123,12 +123,25 @@ class FTSignUpScreenVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-     }
-     
-     // MARK: - Objc Functions
-     
-     @objc private func didTapSignUpButton() {
-         let loginVC = FTLoginScreenVC()
-         self.navigationController?.pushViewController(loginVC, animated: true)
-     }
+    }
+    
+    // MARK: - Objc Functions
+    
+    @objc private func didTapSignUpButton() {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            AuthManager.sh.createUser(email: email, password: password) { [weak self] (success) in
+                guard let self = self else { return }
+                var message: String = ""
+                if (success) {
+                    message = "User was successfully created"
+                } else {
+                    message = "There was an error"
+                }
+                
+                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
 }
